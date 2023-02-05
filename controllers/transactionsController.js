@@ -1,20 +1,19 @@
-
 //DEPENDENCIES
 // const { v4: uuidv4 } = require('uuid')
 const express = require("express")
-const transactionsController = express.Router()
+const transactions = express.Router()
 const transactionsArray = require('../models/transactions.js')
 
 const { validateURL } = require('../models/validations.js')
 
 
 //GET ROUTE FOR /transactions (app.use in app.js handles the transactions)
-transactionsController.get('/', (req, res) =>{
+transactions.get('/', (req, res) =>{
     res.json(transactionsArray)
 })
 
 //POST ROUTE - transactions endpoint for POST
-transactionsController.post("/",validateURL, (req, res)=>{
+transactions.post("/",validateURL, (req, res)=>{
     // const itemID = uuid()
     // req.body[transactionId] = itemID
     transactionsArray.push(req.body)
@@ -23,7 +22,7 @@ transactionsController.post("/",validateURL, (req, res)=>{
 
 
 //SHOW ROUTE
-transactionsController.get('/:index', (req, res) =>{
+transactions.get('/:index', (req, res) =>{
     const {index} = req.params
     if(transactionsArray[index]) {
        res.status(200).json(transactionsArray[index])
@@ -34,7 +33,7 @@ transactionsController.get('/:index', (req, res) =>{
 })
 
 //DELETE ROUTE
-transactionsController.delete("/:index", (req,res) => {
+transactions.delete("/:index", (req,res) => {
     const { index } = req.params
     const deletedTransaction = transactionsArray.splice (index, 1) 
     res.status(200).json(deletedTransaction) 
@@ -42,7 +41,7 @@ transactionsController.delete("/:index", (req,res) => {
 
 
 //PUT ROUTE
-transactionsController.put("/:index", (req,res) => {
+transactions.put("/:index", (req,res) => {
     const {index} = req.params
     if(transactionsArray[index]) {
         transactionsArray[index] =req.body
@@ -52,4 +51,4 @@ transactionsController.put("/:index", (req,res) => {
     }
    })
 
-   module.exports = transactionsController
+   module.exports = transactions
