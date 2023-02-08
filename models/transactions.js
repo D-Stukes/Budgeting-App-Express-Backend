@@ -8,6 +8,7 @@ module.exports = [
       from: "Employer",
       category: "Assets",
       description: "work wages",
+      is_expense: false,
     },
 
     {
@@ -18,6 +19,7 @@ module.exports = [
         from: "Service",
         category: "Expenses",
         description: "adding to house savings",
+        is_expense: false,
       },
       {
         transactionId: "fdsjhd889",
@@ -27,6 +29,7 @@ module.exports = [
         from: "Utility Bill",
         category: "Expenses",
         description: "monthly electricity bill",
+        is_expense: true,
       },
       {
         transactionId: "fdsjhd992",
@@ -36,6 +39,7 @@ module.exports = [
         from: "Utility Bill",
         category: "Expenses",
         description: "monthly gas bill",
+        is_expense: true,
       },
       {
         transactionId: "fdsjhd552",
@@ -45,6 +49,7 @@ module.exports = [
         from: "Utility Bill",
         category: "Expenses",
         description: "landline phone bill",
+        is_expense: true,
       },
       {
         transactionId: "fdsjhd662",
@@ -54,6 +59,7 @@ module.exports = [
         from: "Grocery Store",
         category: "Expenses",
         description: "weekly groceries",
+        is_expense: true,
       },
 ]
 
