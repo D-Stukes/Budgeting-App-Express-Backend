@@ -31,7 +31,7 @@ transactions.post("/",validateURL, (req, res)=>{
     // const itemID = uuid()
     // req.body[transactionId] = itemID
     transactionsArray.push(req.body)
-    res.json(transactionsArray.at(-1))
+    res.json(transactionsArray[transactionsArray.length-1])
 })  //at -1 means end of array length - 1, so it will display the last element posted
 
 
