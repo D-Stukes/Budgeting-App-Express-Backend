@@ -24,7 +24,7 @@ module.exports = [
       {
         transactionId: "fdsjhd889",
         item_name: "Con Edison",
-        amount: 150,
+        amount: -150,
         date: "2023-09-16",
         from: "Utility Bill",
         category: "Expenses",
@@ -34,7 +34,7 @@ module.exports = [
       {
         transactionId: "fdsjhd992",
         item_name: "National Grid",
-        amount: 100,
+        amount: -100,
         date: "2023-07-30",
         from: "Utility Bill",
         category: "Expenses",
@@ -44,7 +44,7 @@ module.exports = [
       {
         transactionId: "fdsjhd552",
         item_name: "Verizon",
-        amount: 200,
+        amount: -200,
         date: "2023-01-29",
         from: "Utility Bill",
         category: "Expenses",
@@ -54,7 +54,7 @@ module.exports = [
       {
         transactionId: "fdsjhd662",
         item_name: "Food",
-        amount: 1000,
+        amount: -1000,
         date: "2023-04-12",
         from: "Grocery Store",
         category: "Expenses",
